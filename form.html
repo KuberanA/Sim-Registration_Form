@@ -144,7 +144,6 @@ body {
     $(document).ready(function() {
         $('#sim-registration-form').on('submit', function(event) {
             event.preventDefault();
-            // Capture form data
             const formData = {
                 fullName: $('#fullName').val(),
                 gender: $('#gender').val(),
@@ -152,11 +151,7 @@ body {
                 phone: $('#phone').val(),
                 id: $('#id').val()
             };
-            
-            // Store form data in localStorage
             localStorage.setItem('formData', JSON.stringify(formData));
-            
-            // Redirect to thank-you page
             window.location.href = "thank-you.html";
         });
     });
